@@ -22,7 +22,7 @@ author: Keira Hill
 navbar-links:
   About Me: "aboutme"
   Resources:
-    - Blog1: "/_posts/2020-02-28-sample-markdown.md"
+    - Blog1: "https://keirahill.github.io/_posts/2020-02-28-sample-markdown.md"
     - Beautiful Jekyll: "https://beautifuljekyll.com"
     - Learn markdown: "https://www.markdowntutorial.com/"
   Author's home: "https://deanattali.com"
