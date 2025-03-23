@@ -379,10 +379,10 @@ img {
   {% endunless %}
   display: block;
 }
-
+/*
 .navbar-custom.top-nav-expanded .avatar-container {
   display: none;
-}
+}*/
 
 @media (min-width: 1200px) {
   .navbar-custom.top-nav-regular .avatar-container {
