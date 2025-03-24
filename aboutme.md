@@ -74,23 +74,18 @@ Various roles including:
 <br />
 <br />
 
-#  Technical Skills
----
+#  Skills
+--- 
 
-SQL: &emsp; ⭐⭐⭐⭐⭐   
-Power BI: &emsp; ⭐⭐⭐⭐⭐    
-R: &emsp; ⭐⭐      
-Excel: &emsp; ⭐⭐⭐⭐⭐    
-Python: &emsp; ⭐⭐⭐       
-Data Visualisation: &emsp; ⭐⭐⭐⭐⭐     
-Data Modelling: &emsp; ⭐⭐⭐⭐⭐   
+| Technical Skills    |                |         | Personal Skills  |               | 
+| --------             | -------       | ------- | -------          | -------       |     
+| SQL:                | ⭐⭐⭐⭐⭐   |         |Creativity:| ⭐⭐⭐⭐⭐   |
+| Power BI:           | ⭐⭐⭐⭐⭐   |         |Problem Solving:| ⭐⭐⭐⭐⭐   |
+| R:                 | ⭐⭐           |         |Organisation:| ⭐⭐⭐⭐⭐   |
+| Excel:              | ⭐⭐⭐⭐⭐   |         |Communication:| ⭐⭐⭐⭐⭐   |
+| Python:             | ⭐⭐⭐        |         | Stakeholder Management:| ⭐⭐⭐⭐⭐   |
+| Data Visualisation: | ⭐⭐⭐⭐⭐   |         |People Management:| ⭐⭐⭐⭐⭐   |
+| Data Modelling:     | ⭐⭐⭐⭐⭐   |         |Networking:| ⭐⭐⭐⭐   |
 
-|                      |                |
-| --------             | -------       |
-| SQL                | ⭐⭐⭐⭐⭐   |
-| Power BI           | ⭐⭐⭐⭐⭐   |
-| R                  | ⭐⭐          |
-| Excel              | ⭐⭐⭐⭐⭐   |
-| Python             | ⭐⭐⭐        | 
-| Data Visualisation | ⭐⭐⭐⭐⭐   | 
-| Data Modelling     | ⭐⭐⭐⭐⭐   | 
+
+
