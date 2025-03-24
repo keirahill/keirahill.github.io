@@ -85,7 +85,8 @@ Python: &emsp; ⭐⭐⭐
 Data Visualisation: &emsp; ⭐⭐⭐⭐⭐     
 Data Modelling: &emsp; ⭐⭐⭐⭐⭐   
 
-
+|                      |                |
+| --------             | -------       |
 | SQL                | ⭐⭐⭐⭐⭐   |
 | Power BI           | ⭐⭐⭐⭐⭐   |
 | R                  | ⭐⭐          |
