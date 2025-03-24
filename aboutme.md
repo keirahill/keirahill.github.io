@@ -89,13 +89,13 @@ Various roles including:
 
 #  Education
 --- 
-### University of Wolverhampton   
+###### University of Wolverhampton   
 BA(HONS) Business Management (2:1)   
 
-### St. Edmunds RC School, Wolverhampton   
+###### St. Edmunds RC School, Wolverhampton   
 4 A Levels: Biology, Chemistry, Mathematics, General Studies   
 
-### St. Edmunds RC School, Wolverhampton   
+###### St. Edmunds RC School, Wolverhampton   
 9 A-C Grade GCSEs: Including Mathematics and English   
 
 #  Interests
