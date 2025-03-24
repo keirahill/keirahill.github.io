@@ -77,15 +77,15 @@ Various roles including:
 #  Skills
 --- 
 
-| Technical Skills    |                |         | Personal Skills  |               | 
+| Technical Skills    |                | &emsp;        | Personal Skills  |               | 
 | --------             | -------       | ------- | -------          | -------       |     
-| SQL:                | ⭐⭐⭐⭐⭐   |         |Creativity:| ⭐⭐⭐⭐⭐   |
-| Power BI:           | ⭐⭐⭐⭐⭐   |         |Problem Solving:| ⭐⭐⭐⭐⭐   |
-| R:                 | ⭐⭐           |         |Organisation:| ⭐⭐⭐⭐⭐   |
-| Excel:              | ⭐⭐⭐⭐⭐   |         |Communication:| ⭐⭐⭐⭐⭐   |
-| Python:             | ⭐⭐⭐        |         | Stakeholder Management:| ⭐⭐⭐⭐⭐   |
-| Data Visualisation: | ⭐⭐⭐⭐⭐   |         |People Management:| ⭐⭐⭐⭐⭐   |
-| Data Modelling:     | ⭐⭐⭐⭐⭐   |         |Networking:| ⭐⭐⭐⭐   |
+| SQL:                | ⭐⭐⭐⭐⭐   | &emsp;        |Creativity:| ⭐⭐⭐⭐⭐   |
+| Power BI:           | ⭐⭐⭐⭐⭐   | &emsp;        |Problem Solving:| ⭐⭐⭐⭐⭐   |
+| R:                 | ⭐⭐           | &emsp;        |Organisation:| ⭐⭐⭐⭐⭐   |
+| Excel:              | ⭐⭐⭐⭐⭐   | &emsp;        |Communication:| ⭐⭐⭐⭐⭐   |
+| Python:             | ⭐⭐⭐        | &emsp;        | Stakeholder Management:| ⭐⭐⭐⭐⭐   |
+| Data Visualisation: | ⭐⭐⭐⭐⭐   | &emsp;        |People Management:| ⭐⭐⭐⭐⭐   |
+| Data Modelling:     | ⭐⭐⭐⭐⭐   | &emsp;        |Networking:| ⭐⭐⭐⭐   |
 
 
 
