@@ -77,5 +77,11 @@ Various roles including:
 #  Technical Skills
 ---
 
-SQL
-Power BI
+SQL: &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; ⭐⭐⭐⭐⭐   
+Power BI: &emsp;&emsp;&emsp;&emsp;&emsp; ⭐⭐⭐⭐⭐    
+R: &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; ⭐⭐      
+Excel: &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; ⭐⭐⭐⭐⭐    
+Python: &emsp;&emsp;&emsp;&emsp;&emsp;&emsp; ⭐⭐⭐       
+Data Visualisation: &emsp; ⭐⭐⭐⭐⭐     
+Data Modelling: &emsp;&emsp; ⭐⭐⭐⭐⭐   
+ 
