@@ -77,15 +77,25 @@ Various roles including:
 #  Skills
 --- 
 
-| Technical Skills    |                | &emsp;        | Personal Skills  |               | 
-| --------             | -------       | ------- | -------          | -------       |     
-| SQL:                | ⭐⭐⭐⭐⭐   | &emsp;        |Creativity:| ⭐⭐⭐⭐⭐   |
-| Power BI:           | ⭐⭐⭐⭐⭐   | &emsp;        |Problem Solving:| ⭐⭐⭐⭐⭐   |
-| R:                 | ⭐⭐           | &emsp;        |Organisation:| ⭐⭐⭐⭐⭐   |
-| Excel:              | ⭐⭐⭐⭐⭐   | &emsp;        |Communication:| ⭐⭐⭐⭐⭐   |
-| Python:             | ⭐⭐⭐        | &emsp;        | Stakeholder Management:| ⭐⭐⭐⭐⭐   |
-| Data Visualisation: | ⭐⭐⭐⭐⭐   | &emsp;        |People Management:| ⭐⭐⭐⭐⭐   |
-| Data Modelling:     | ⭐⭐⭐⭐⭐   | &emsp;        |Networking:| ⭐⭐⭐⭐   |
+| Technical Skills    |                | &emsp;&emsp;        | Personal Skills  |               | 
+| --------             | -------       | -------             | -------          | -------       |     
+| SQL:                | ⭐⭐⭐⭐⭐   | &emsp;&emsp;        |Creativity:| ⭐⭐⭐⭐⭐   |
+| Power BI:           | ⭐⭐⭐⭐⭐   | &emsp; &emsp;       |Problem Solving:| ⭐⭐⭐⭐⭐   |
+| R:                 | ⭐⭐           | &emsp; &emsp;       |Organisation:| ⭐⭐⭐⭐⭐   |
+| Excel:              | ⭐⭐⭐⭐⭐   | &emsp; &emsp;       |Communication:| ⭐⭐⭐⭐⭐   |
+| Python:             | ⭐⭐⭐        | &emsp;&emsp;        | Stakeholder Management:| ⭐⭐⭐⭐⭐   |
+| Data Visualisation: | ⭐⭐⭐⭐⭐   | &emsp; &emsp;       |People Management:| ⭐⭐⭐⭐⭐   |
+| Data Modelling:     | ⭐⭐⭐⭐⭐   | &emsp; &emsp;       |Networking:| ⭐⭐⭐⭐   |
 
+#  Education
+--- 
+### University of Wolverhampton   
+BA(HONS) Business Management (2:1)   
+
+### St. Edmunds RC School, Wolverhampton   
+4 A Levels: Biology, Chemistry, Mathematics, General Studies   
+
+### St. Edmunds RC School, Wolverhampton   
+9 A-C Grade GCSEs: Including Mathematics and English   
 
 
