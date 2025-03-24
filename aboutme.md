@@ -10,7 +10,8 @@ subtitle: Insights Professional
 Highly motivated Insight Manager with proven track record in operational and business transformation, focussed on delivery of exceptional customer experience and exceeding business objectives.
 
 I have worked in a variety of roles over my 22 year career and spent the last 18 years developing into a seasoned Data and Insights professional. During this period my technical skills have grown, with particular prowess within Power BI and SQL, and I’m now considered an expert for producing innovative reporting solutions aligned to the wider business goals. I manage multiple stakeholders requiring exceptional interpersonal skills and can work across business functions adjusting language appropriate tothe audience, allowing me to convey complex ideas and ensure alignment.
-
+<br />   
+<br />   
 
 #  Work Experience
 ---
