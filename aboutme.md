@@ -100,4 +100,4 @@ BA(HONS) Business Management (2:1)
 
 #  Interests
 --- 
-![Interests](/assets/img/interests.jpg)
+![Interests](/assets/img/interests2.jpg)
