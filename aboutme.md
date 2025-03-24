@@ -85,9 +85,11 @@ Python: &emsp; ⭐⭐⭐
 Data Visualisation: &emsp; ⭐⭐⭐⭐⭐     
 Data Modelling: &emsp; ⭐⭐⭐⭐⭐   
 
-| Skill    |                 |
-| -------- | -------         |
-| SQL      | ⭐⭐⭐⭐⭐    |
-| Power BI | ⭐⭐⭐⭐⭐    |
-| R        | ⭐⭐            |
- 
+
+| SQL                | ⭐⭐⭐⭐⭐   |
+| Power BI           | ⭐⭐⭐⭐⭐   |
+| R                  | ⭐⭐          |
+| Excel              | ⭐⭐⭐⭐⭐   |
+| Python             | ⭐⭐⭐        | 
+| Data Visualisation | ⭐⭐⭐⭐⭐   | 
+| Data Modelling     | ⭐⭐⭐⭐⭐   | 
