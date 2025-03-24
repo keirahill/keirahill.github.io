@@ -839,15 +839,15 @@ table {
   display: block;
 }
 table tr {
-  border-top: 1px solid #cccccc;
+  /*border-top: 1px solid #cccccc;*/
   background-color: var(--page-col);
   margin: 0;
   padding: 0;
 }
-table tr:nth-child(2n) {
+/*table tr:nth-child(2n) {
   background-color: #f8f8f8;
-}
-table tr th,
+}*/
+/*table tr th,
 table tr td {
   border: 1px solid #cccccc;
   text-align: left;
@@ -864,7 +864,7 @@ table tr td :first-child {
 table tr th :last-child,
 table tr td :last-child {
   margin-bottom: 0;
-}
+} */
 
 /* --- Code blocks --- */
 
