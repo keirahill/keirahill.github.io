@@ -98,4 +98,6 @@ BA(HONS) Business Management (2:1)
 ### St. Edmunds RC School, Wolverhampton   
 9 A-C Grade GCSEs: Including Mathematics and English   
 
-
+#  Interests
+--- 
+![Interests](/assets/img/interests.jpg){: .mx-auto.d-block :}
