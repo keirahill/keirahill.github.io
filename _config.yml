@@ -21,8 +21,8 @@ author: Keira Hill
 
 navbar-links:
   About Me: "aboutme"
-  #Resources:
-  #  - Beautiful Jekyll: "https://beautifuljekyll.com"
+  Project Notebooks:
+    - Obesity Dataset: "https://github.com/keirahill/keirahill.github.io/blob/master/Notebooks/TestFile.ipynb"
   #  - Learn markdown: "https://www.markdowntutorial.com/"
   #Author's home: "https://deanattali.com"
 
