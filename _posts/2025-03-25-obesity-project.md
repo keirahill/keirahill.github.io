@@ -2,8 +2,8 @@
 layout: post
 title: Obesity Project
 subtitle: Which combinations of lifestyle habits have an impact on obesity, and can obesity levels be predicted using these features?
-cover-img: /assets/img/pexels-anntarazevich-5910763.jpg
-thumbnail-img: /assets/img/pexels-moe-magners-6669476.jpg
+cover-img: /assets/img/obesityheader.jpg
+thumbnail-img: /assets/img/obesitythumb.jpg
 tags: [clustering, classification]
 author: Keira Hill
 ---
