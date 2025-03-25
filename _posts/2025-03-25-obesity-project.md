@@ -16,6 +16,7 @@ This project examines obesity levels and the influence of lifestyle factors. Ove
 The dataset for this project, [Estimation of Obesity Levels Based on Eating Habits and Physical Condition](https://archive.ics.uci.edu/dataset/544/estimation+of+obesity+levels+based+on+eating+habits+and+physical+condition), is sourced from the UCI Machine Learning Repository. Data was collected via an anonymous survey from individuals in Peru, Mexico, and Colombia. A total of 485 respondents answered questions about their nutritional and physical behaviour. Classifications of nutritional status, as defined by WHO and provided in figure 1.4.1.1, were applied based on BMI calculated by weight and height, with an additional split on ‘Pre-obesity’.
 
 ![BMI](/assets/img/project_obesity/BMITable.png)
+
 {:.image-caption}
 *Figure 1. (WORLD HEALTH ORGANISATION, 2022)*
 
