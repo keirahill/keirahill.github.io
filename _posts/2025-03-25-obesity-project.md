@@ -17,6 +17,12 @@ The dataset for this project, [Estimation of Obesity Levels Based on Eating Habi
 
 ![BMI](/assets/img/project_obesity/BMITable.png)
 
+
+<figure>
+  <img src="{{site.url}}/assets/img/project_obesity/BMITable.png" alt="BMI"/>
+  <figcaption>Figure 1. (WORLD HEALTH ORGANISATION, 2022).</figcaption>
+</figure>
+
 Due to an imbalance towards 'normal' weight among respondents, additional data was synthetically generated using SMOTE, increasing the observations to 2,111 (Palechor and Manotas, 2019).
 
    
