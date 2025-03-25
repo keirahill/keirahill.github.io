@@ -24,12 +24,44 @@ Due to an imbalance towards 'normal' weight among respondents, additional data w
   
 The data was loaded into the notebook to be explored using Python 
 
+```javascript
+obesity_data = pd.read_csv(
+    "https://github.com/mwaskom/seaborn-data/raw/master/diamonds.csv"
+)
+
+obesity_data = obesity_data.toPandas()
+
+```
 
 Initial xploration reveals no missing values. However, some columns expected to contain object data were numeric, requiring further investigation (figure 2). 
 
+{:.image-caption}
+| ![BMI](/assets/img/project_obesity/InitalExploration.png) |
+|:-----:|
+| *Figure 2. Initial Exploration of dataset* |
 
+Most column names were not self-explanatory, so they were renamed for clarity and consistency. Ordinal features were categorised as 'categorical' with specified orders.   
+```javascript
+# reference: (The Py4DS Community, 2023)
+# sets objects to categorical for ordering 
+obesity_data["food_between_meals"] = obesity_data["food_between_meals"].astype(
+    CategoricalDtype(
+        categories=["no", "Sometimes", "Frequently", "Always"], ordered=True
+    )
+)
+obesity_data["alcohol_frequency"] = obesity_data["alcohol_frequency"].astype(
+    CategoricalDtype(
+        categories=["no", "Sometimes", "Frequently", "Always"], ordered=True
+    )
+)
+obesity_data["weight_class"] = obesity_data["weight_class"].astype(
+    CategoricalDtype(
+        categories=["Insufficient_Weight", "Normal_Weight", "Overweight_Level_I", "Overweight_Level_II", "Obesity_Type_I", "Obesity_Type_II", "Obesity_Type_III"], ordered=True
+    )
+)
+```
+Categorical columns encoded as floats were analysed through histograms (figure 4). The float values may have been generated during the SMOTE process used for data balancing. These columns were therefore rounded to match the correct number of responses for each feature, allowing them to be interpreted according to the original response options. Additionally, a set of dictionaries has been created to map the encoded responses back to the text responses for clarity within the methodology stage.
 
-Most column names were not self-explanatory, so they were renamed for clarity and consistency. Ordinal features were categorized as categorical with specified orders.   
+An additional attribute for BMI, calculated using the formula weight/height², was added to support the exploratory data analysis (EDA). 
 
-Categorical columns encoded as floats were analysed through histograms. The float values may have been generated during the SMOTE process used for data balancing. These columns were rounded to match the correct number of responses for each feature, allowing them to be interpreted according to the original response options.
-An additional attribute for BMI, calculated using the formula weight/height², was added to support the exploratory data analysis (EDA). The final transformation involved splitting the data into training and testing datasets, a crucial step to avoid overfitting and to evaluate model performance. Studies suggest that allocating 20-30% of the data for testing yields optimal results (Gholamy, Kreinovich, and Kosheleva, 2018).
+The final transformation involved splitting the data into training and testing datasets, a crucial step to avoid overfitting and to evaluate model performance. Studies suggest that allocating 20-30% of the data for testing yields optimal results (Gholamy, Kreinovich, and Kosheleva, 2018).
