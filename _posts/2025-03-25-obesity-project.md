@@ -59,6 +59,7 @@ obesity_data["weight_class"] = obesity_data["weight_class"].astype(
 )
 ```
 Categorical columns encoded as floats were analysed through histograms (figure 3). 
+
 {:.image-caption}
 | ![BMI](/assets/img/project_obesity/CategorigaclHistograms.png) |
 |:-----:|
