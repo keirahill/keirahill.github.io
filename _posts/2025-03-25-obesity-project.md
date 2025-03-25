@@ -17,6 +17,8 @@ The dataset for this project, [Estimation of Obesity Levels Based on Eating Habi
 
 ![BMI](/assets/img/project_obesity/BMITable.png)
 
+{:.image-caption}
+*Figure 1. (WORLD HEALTH ORGANISATION, 2022)*
 
 <figure>
   <img src="{{site.url}}/assets/img/project_obesity/BMITable.png" alt="BMI"/>
