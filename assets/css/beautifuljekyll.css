@@ -520,7 +520,7 @@ footer .footer-custom-content {
   font-weight: 300;
   margin-bottom: 0.625rem;
 }
-/*.post-preview .post-meta,
+.post-preview .post-meta,
 .post-heading .post-meta {
   color: var(--mid-col);
   font-size: 1.125rem;
@@ -539,7 +539,7 @@ footer .footer-custom-content {
 }
 .post-heading .post-meta .middot {
   margin: 0 0.625rem;
-} */
+} 
 .post-preview .post-entry {
   width: 100%;
 }
