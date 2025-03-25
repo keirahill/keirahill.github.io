@@ -19,7 +19,7 @@ This is a demo post to show you how to write blog posts with markdown.  I strong
 
 [This is a link to a different site](https://deanattali.com/) and [this is a link to a section inside this page](#local-urls).
 
-[This is a link to a code](/Notebooks/TestFile.ipynb)
+[This is a link to a code](https://github.com/keirahill/keirahill.github.io/raw/refs/heads/master/Notebooks/TestFile.ipynb)
 
 Here's a table:
 
