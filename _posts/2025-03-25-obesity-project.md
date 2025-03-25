@@ -13,17 +13,7 @@ author: Keira Hill
 This project examines obesity levels and the influence of lifestyle factors. Over the past several decades, obesity has been increasing (Tzenios, 2023), posing a risk for chronic diseases such as cancer, diabetes, and heart disease (Abbott, Lemacks, and Greer, 2022; Tiwari and Balasundaram, 2023). These conditions contribute to high mortality rates and healthcare costs. Lifestyle factors play a crucial role in managing obesity (Tanaka and Nakanishi, 1996; Araromi et al., 2024; CDC, 2024). Understanding which lifestyle factors most significantly impact obesity can help individuals manage aspects within their control.
 
 # Dataset
-The dataset for this project, [Estimation of Obesity Levels Based on Eating Habits and Physical Condition](https://archive.ics.uci.edu/dataset/544/estimation+of+obesity+levels+based+on+eating+habits+and+physical+condition), is sourced from the UCI Machine Learning Repository. Data was collected via an anonymous survey from individuals in Peru, Mexico, and Colombia. A total of 485 respondents answered questions about their nutritional and physical behaviour. Classifications of nutritional status, as defined by WHO and provided in figure 1.4.1.1, were applied based on BMI calculated by weight and height, with an additional split on ‘Pre-obesity’.
-
-![BMI](/assets/img/project_obesity/BMITable.png)
-
-{:.image-caption}
-*Figure 1. (WORLD HEALTH ORGANISATION, 2022)*
-
-<figure>
-  <img src="{{site.url}}/assets/img/project_obesity/BMITable.png" alt="BMI"/>
-  <figcaption>Figure 1. (WORLD HEALTH ORGANISATION, 2022).</figcaption>
-</figure>
+The dataset for this project, [Estimation of Obesity Levels Based on Eating Habits and Physical Condition](https://archive.ics.uci.edu/dataset/544/estimation+of+obesity+levels+based+on+eating+habits+and+physical+condition), is sourced from the UCI Machine Learning Repository. Data was collected via an anonymous survey from individuals in Peru, Mexico, and Colombia. A total of 485 respondents answered questions about their nutritional and physical behaviour. Classifications of nutritional status, as defined by WHO and provided in figure 1, were applied based on BMI calculated by weight and height, with an additional split on ‘Pre-obesity’.
 
 {:.image-caption}
 | ![BMI](/assets/img/project_obesity/BMITable.png) |
@@ -31,9 +21,11 @@ The dataset for this project, [Estimation of Obesity Levels Based on Eating Habi
 | *Figure 1. (WORLD HEALTH ORGANISATION, 2022)* |
 
 Due to an imbalance towards 'normal' weight among respondents, additional data was synthetically generated using SMOTE, increasing the observations to 2,111 (Palechor and Manotas, 2019).
+  
+The data was loaded into the notebook to be explored using Python 
 
-   
-The data was explored using Python, revealing no missing values. However, some columns expected to contain object data were numeric, requiring further investigation. 
+
+Initial xploration reveals no missing values. However, some columns expected to contain object data were numeric, requiring further investigation (figure 2). 
 
 
 
