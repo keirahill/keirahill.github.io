@@ -708,7 +708,7 @@ nav.top-nav-short-permanent ~ header > .intro-header.big-img {
 .intro-header.big-img .page-heading,
 .intro-header.big-img .post-heading {
   padding: 6.25rem 0;
-  color: #FFF;
+  color: #DDD;
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
   background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
   display: inline-block; 
