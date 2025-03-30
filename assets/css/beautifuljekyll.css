@@ -711,7 +711,9 @@ nav.top-nav-short-permanent ~ header > .intro-header.big-img {
   color: #DDD;
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
   background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-  display: inline-block; 
+  /*display: inline-block; */
+  width: 100%; /* Ensure the box takes up the full width */
+  text-align: center; /* Keep text centered */
 }
 .intro-header .page-heading h1 {
   margin-top: 0;
