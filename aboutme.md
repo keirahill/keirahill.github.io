@@ -83,7 +83,7 @@ Various roles including:
 | Power BI:           | ⭐⭐⭐⭐⭐   | &emsp; &emsp;       |Problem Solving:| ⭐⭐⭐⭐⭐   |
 | R:                 | ⭐⭐           | &emsp; &emsp;       |Organisation:| ⭐⭐⭐⭐⭐   |
 | Excel:              | ⭐⭐⭐⭐⭐   | &emsp; &emsp;       |Communication:| ⭐⭐⭐⭐⭐   |
-| Python:             | ⭐⭐⭐        | &emsp;&emsp;        | Stakeholder Management:| ⭐⭐⭐⭐⭐   |
+| Python:             | ⭐⭐          | &emsp;&emsp;        | Stakeholder Management:| ⭐⭐⭐⭐⭐   |
 | Data Visualisation: | ⭐⭐⭐⭐⭐   | &emsp; &emsp;       |People Management:| ⭐⭐⭐⭐⭐   |
 | Data Modelling:     | ⭐⭐⭐⭐⭐   | &emsp; &emsp;       |Networking:| ⭐⭐⭐⭐   |
 
@@ -97,6 +97,17 @@ BA(HONS) Business Management (2:1)
 
 **St. Edmunds RC School, Wolverhampton**   
 9 A-C Grade GCSEs: Including Mathematics and English   
+
+#  Certification
+--- 
+**Data Analyst in R** (career track)   
+Datacamp: 2021   
+
+**Associate Data Scientist in R**  (career track)        
+Datacamp: 2022    
+
+**Power BI Data Analyst Associate**   
+Microsoft Certification: 2022
 
 #  Interests
 --- 
