@@ -73,7 +73,7 @@ Various roles including:
 - Customer Service Advisor
 <br />
 <br />
-
+   
 #  Skills
 --- 
 
@@ -88,8 +88,7 @@ Various roles including:
 | Data Modelling:     | ⭐⭐⭐⭐⭐   | &emsp; &emsp;       |Networking:| ⭐⭐⭐⭐   |   
    
 <br />   
-
-
+   
 #  Education
 --- 
 **University of Wolverhampton**   
@@ -112,9 +111,7 @@ Datacamp: 2022
 
 **Power BI Data Analyst Associate**   
 Microsoft Certification: 2022
-
 <br />   
-
 
 #  Interests
 --- 
