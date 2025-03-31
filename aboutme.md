@@ -88,7 +88,7 @@ Various roles including:
 | Data Modelling:     | ⭐⭐⭐⭐⭐   | &emsp; &emsp;       |Networking:| ⭐⭐⭐⭐   |   
    
 <br />   
-<br /> 
+
 
 #  Education
 --- 
@@ -101,7 +101,7 @@ BA(HONS) Business Management (2:1)
 **St. Edmunds RC School, Wolverhampton**   
 9 A-C Grade GCSEs: Including Mathematics and English   
 <br />   
-<br /> 
+
 #  Certification
 --- 
 **Data Analyst in R** (career track)   
@@ -114,7 +114,7 @@ Datacamp: 2022
 Microsoft Certification: 2022
 
 <br />   
-<br /> 
+
 
 #  Interests
 --- 
