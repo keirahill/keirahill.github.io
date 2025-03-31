@@ -89,6 +89,7 @@ Various roles including:
    
 <br />   
 <br /> 
+
 #  Education
 --- 
 **University of Wolverhampton**   
@@ -111,8 +112,10 @@ Datacamp: 2022
 
 **Power BI Data Analyst Associate**   
 Microsoft Certification: 2022
+
 <br />   
 <br /> 
+
 #  Interests
 --- 
 ![Interests](/assets/img/interests2.jpg)
