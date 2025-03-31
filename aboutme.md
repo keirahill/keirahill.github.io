@@ -85,7 +85,8 @@ Various roles including:
 | Excel:              | ⭐⭐⭐⭐⭐   | &emsp; &emsp;       |Communication:| ⭐⭐⭐⭐⭐   |
 | Python:             | ⭐⭐          | &emsp;&emsp;        | Stakeholder Management:| ⭐⭐⭐⭐⭐   |
 | Data Visualisation: | ⭐⭐⭐⭐⭐   | &emsp; &emsp;       |People Management:| ⭐⭐⭐⭐⭐   |
-| Data Modelling:     | ⭐⭐⭐⭐⭐   | &emsp; &emsp;       |Networking:| ⭐⭐⭐⭐   |
+| Data Modelling:     | ⭐⭐⭐⭐⭐   | &emsp; &emsp;       |Networking:| ⭐⭐⭐⭐   |   
+   
 <br />   
 <br /> 
 #  Education
