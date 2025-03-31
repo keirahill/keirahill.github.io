@@ -86,7 +86,8 @@ Various roles including:
 | Python:             | ⭐⭐          | &emsp;&emsp;        | Stakeholder Management:| ⭐⭐⭐⭐⭐   |
 | Data Visualisation: | ⭐⭐⭐⭐⭐   | &emsp; &emsp;       |People Management:| ⭐⭐⭐⭐⭐   |
 | Data Modelling:     | ⭐⭐⭐⭐⭐   | &emsp; &emsp;       |Networking:| ⭐⭐⭐⭐   |
-
+<br />   
+<br /> 
 #  Education
 --- 
 **University of Wolverhampton**   
@@ -97,7 +98,8 @@ BA(HONS) Business Management (2:1)
 
 **St. Edmunds RC School, Wolverhampton**   
 9 A-C Grade GCSEs: Including Mathematics and English   
-
+<br />   
+<br /> 
 #  Certification
 --- 
 **Data Analyst in R** (career track)   
@@ -108,7 +110,8 @@ Datacamp: 2022
 
 **Power BI Data Analyst Associate**   
 Microsoft Certification: 2022
-
+<br />   
+<br /> 
 #  Interests
 --- 
 ![Interests](/assets/img/interests2.jpg)
