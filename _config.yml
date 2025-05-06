@@ -23,8 +23,7 @@ navbar-links:
   About Me: "aboutme"
   Project Notebooks:
     - Obesity Dataset: "https://github.com/keirahill/keirahill.github.io/blob/master/Notebooks/Obesity Dataset Public.ipynb"
-  #  - Learn markdown: "https://www.markdowntutorial.com/"
-  #Author's home: "https://deanattali.com"
+ 
 
 ################
 # --- Logo --- #
@@ -52,19 +51,19 @@ round-avatar: true
 social-network-links:
   email: "kimobi@gmail.com"
   rss: true  # remove this line if you don't want to show an RSS link at the bottom
- # facebook: deanattali
+ # facebook: 
   github: keirahill
-#  twitter: daattali
-#  patreon: DeanAttali
-#  youtube: "@daattali"
-#  whatsapp: 15551212
+#  twitter: 
+#  patreon:
+#  youtube: 
+#  whatsapp: 
 #  medium: yourname
 #  reddit: yourname or r/yoursubreddit
   linkedin: keira-hill-b26182b0
 #  xing: yourname
-#  stackoverflow: "3943160/daattali"
-#  snapchat: deanat78
-#  instagram: deanat78
+#  stackoverflow: 
+#  snapchat: 
+#  instagram: 
 #  spotify: yourname
 #  telephone: +14159998888
 #  steam: deanat78
