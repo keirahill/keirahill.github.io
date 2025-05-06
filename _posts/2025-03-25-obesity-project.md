@@ -141,6 +141,7 @@ A pairplot (Figure 6) was conducted on the continuous data, to explore distribut
 |:-----:|
 | *Figure 6. Pairplot* |
 
+  
 ```javascript
 sns.heatmap(obesity_data_numeric.corr(), annot = True, cmap='Blues').set_title('Correlation of Variables')
 ```
@@ -149,6 +150,7 @@ sns.heatmap(obesity_data_numeric.corr(), annot = True, cmap='Blues').set_title('
 | ![BMI](/assets/img/project_obesity/10.png) |
 |:-----:|
 | *Figure 7. Correlation matrix* |
+
 
 ## BMI vs Weight Class
 
@@ -173,8 +175,8 @@ Box plots were used to visualise BMI distributions across each category (Figure 
 | ![BMI](/assets/img/project_obesity/13.png) |
 |:-----:|
 | *Figure 10. Boxplots of BMI distributions* |
-
-
+  
+  
 ## Clustering
 ### K-Protoypes
 The dataset was clustered using K-Prototypes, a method that handles mixed datatypes, applying k-means for numeric data and matching categories for nominal data (Ruberts, 2020). Ordinal features were treated as numeric. All numeric features were normalised using Scikit-learn’s MinMax scaler, ensuring equal contribution.
@@ -202,10 +204,10 @@ from kmodes.kprototypes import KPrototypes
 // Convert column names to indices which are required for k-protoypes
 categorical_indices = [obesity_data_combined.columns.get_loc(col) for col in featurescat]
 
-random_seed = 42 # set ramdom seed for reproducability
+random_seed = 42 // set ramdom seed for reproducability
 
-ks = range(1, 10) # range of clusters to test
-inertias = [] # create an empty df to append values to
+ks = range(1, 10) // range of clusters to test
+inertias = [] // create an empty df to append values to
 // loop through each value of k
 for k in ks:
     // Create a Kprotoypes instance with k clusters
@@ -232,12 +234,13 @@ An elbow plot (Figure 11) suggests the optimal number of clusters is 4, with obs
 |:-----:|
 | *Figure 11. Elbow plot* |
 
+    
 {:.image-caption}
 | ![BMI](/assets/img/project_obesity/15.png) |
 |:-----:|
 | *Figure 12. Distrbutions of clusters* |
-
-
+  
+  
 ### Factor Analysis
 Visualising clusters with 16 features is challenging, requiring a feature reduction. As it is a mixed dataset, FAMD from the Prince package was chosen (Mahmood, Md Sohel, 2021). Although only 33% of the variance is explained by the first three features (Figure 13), plotting these clusters against these three reveals distinct patterns, indicating the data can be grouped (Figure 14).
 
@@ -246,18 +249,21 @@ Visualising clusters with 16 features is challenging, requiring a feature reduct
 |:-----:|
 | *Figure 13. Explained varaince by features* |
 
+  
 {:.image-caption}
 | ![BMI](/assets/img/project_obesity/17.png) |
 |:-----:|
 | *Figure 14. 3D scatter plot of clusters* |
 
+  
 ### Cluster Analysis
 
 {:.image-caption}
 | ![BMI](/assets/img/project_obesity/18.png) |
 |:-----:|
 | *Figure 15. BMI and Weight Class by cluster* |
-
+  
+  
 {:.image-caption}
 | ![BMI](/assets/img/project_obesity/19.png) |
 |:-----:|
@@ -288,6 +294,7 @@ SHAP beeswarm plots (Figure 18) display the importance of each feature for predi
 |:-----:|
 | *Figure 18. SHAP Beeswarm for each cluster* |
 
+    
 {:.image-caption}
 | ![BMI](/assets/img/project_obesity/23.png) |
 |:-----:|
@@ -297,7 +304,22 @@ Analysis identified four clusters: two male, two female. The most influential me
 
 ## XGBoost
 
-XGBoost, a popular gradient boosting algorithm for classification and regression (Brownlee, 2016; Tuychiev, 2023) was chosen for predicting BMI. Weight was excluded to focus other feature impacts. Evaluation results for combined, female and male models are in Figure 20 and scatter plots of predicted vs. actual BMI in Figure 21
+XGBoost, a popular gradient boosting algorithm for classification and regression (Brownlee, 2016; Tuychiev, 2023) was chosen for predicting BMI. Weight was excluded to focus other feature impacts. Evaluation results for combined, female and male models are in Figure 20 and scatter plots of predicted vs. actual BMI in Figure 21.
+
+```javascript
+// reference: (Fullegar, 2024)
+data = {'Combined': [r2_score, rmse, mape],
+        'Male': [r2_score_male, rmse_male, mape_male], 
+        'Female':[r2_score_female, rmse_female, mape_female]} 
+  
+df_comp = pd.DataFrame(data) 
+df_comp = df_comp.rename(index={0 : 'R squared score', 
+                                1 : 'Mean Squared Error', 
+                                2 : 'Mean Absolute Percentage Error' })
+df_comp
+acc_df = df_comp.sort_values(by = 'R squared score', axis = 1, ascending = False)
+acc_df.T
+```
 
 {:.image-caption}
 | ![BMI](/assets/img/project_obesity/24.png) |
@@ -320,6 +342,7 @@ Figure 22 compares the SHAP beeswarm plots for the combined, male, and female mo
 |:-----:|
 | *Figure 22. SHAP beeswarm for each model and feature importance summary* |
 
+  
 ## Power BI
 Due to its ease in filtering data and creating interactive visuals, a power BI report was created.
 
@@ -328,21 +351,25 @@ Due to its ease in filtering data and creating interactive visuals, a power BI r
 |:-----:|
 | *Figure 23. Sankey visual of feature importance on predicting BMI* |
 
+  
 {:.image-caption}
 | ![BMI](/assets/img/project_obesity/28.png) |
 |:-----:|
 | *Figure 24. BMI Analysis Dashboard - Combined * |
 
+  
 {:.image-caption}
 | ![BMI](/assets/img/project_obesity/29.png) |
 |:-----:|
 | *Figure 25. BMI Analysis Dashboard - Example hover to view distributions* |
 
+  
 {:.image-caption}
 | ![BMI](/assets/img/project_obesity/30.png) |
 |:-----:|
 | *Figure 26. BMI Analysis Dashboard - Male and Female * |
 
+  
 # Improvements
 ## BMI
 BMI is a traditional measure for obesity. At an individual level, it can be misleading, depending on gender, age, and physicality (De Lorenzo et al., 2019). An alternative is body fat percentage, with modelling techniques being explored to estimate using body variables (Muñoz et al., 2025).
@@ -357,8 +384,65 @@ Genetic factors contribute significantly to obesity (Herrera and Lindgren, 2010;
 
 # Appendix
 
+{:.image-caption}
+| ![BMI](/assets/img/project_obesity/Picture1.png) |
+|:-----:|
+| *Appendix One. Survey Questions, Possible Answers and Variable Names * |
 
+{:.image-caption}
+| ![BMI](/assets/img/project_obesity/Picture2.png) |
+|:-----:|
+| *Appendix Two. Check of categorical responses within dataset * |
 
 # References
+
+Abbott, L., Lemacks, J. and Greer, T. (2022) ‘Development and Evaluation of a Measure for Social Support Provided by Friends during Lifestyle Management Programs’, Healthcare, 10(5), p. 901. Available at: https://doi.org/10.3390/healthcare10050901.  
+
+Araromi, N. et al. (2024) ‘Managing obesity with lifestyle modification, outcomes, and recommendations’, Medical Research Archives, 12(7). Available at: https://doi.org/10.18103/mra.v12i7.5425.  
+
+Araujo, M. et al. (2017) ‘Using Facebook Ads Audiences for Global Lifestyle Disease Surveillance: Promises and Limitations’, in Proceedings of the 2017 ACM on Web Science Conference. New York, NY, USA: Association for Computing Machinery (WebSci ’17), pp. 253–257. Available at: https://doi.org/10.1145/3091478.3091513.  
+
+Brownlee, J. (2016) XGBoost With Python: Gradient Boosted Trees with XGBoost and scikit-learn. Machine Learning Mastery. Available at: https://repositories.nust.edu.pk/xmlui/bitstream/handle/123456789/16368/xgboost_with_python.pdf?sequence=1&isAllowed=y (Accessed: 27 April 2025).  
+
+CDC (2024) About Chronic Diseases, Chronic Disease. Available at: https://www.cdc.gov/chronic-disease/about/index.html (Accessed: 6 March 2025).  
+
+De Lorenzo, A. et al. (2019) ‘Why primary obesity is a disease?’, Journal of Translational Medicine, 17(1), p. 169. Available at: https://doi.org/10.1186/s12967-019-1919-y.  
+
+Gholamy, A., Kreinovich, V. and Kosheleva, O. (2018) Why 70/30 or 80/20 Relation Between Training and Testing Sets: A Pedagogical Explanation. Available at: https://www.cs.utep.edu/vladik/2018/tr18-09.pdf (Accessed: 8 March 2025).  
+
+Herrera, B.M. and Lindgren, C.M. (2010) ‘The Genetics of Obesity’, Current Diabetes Reports, 10(6), pp. 498–505. Available at: https://doi.org/10.1007/s11892-010-0153-z.  
+
+Islam, T. and Goldwasser, D. (2021) ‘Analysis of Twitter Users’ Lifestyle Choices using Joint Embedding Model’, Proceedings of the International AAAI Conference on Web and Social Media, 15, pp. 242–253. Available at: https://doi.org/10.1609/icwsm.v15i1.18057.  
+
+Levi, I. et al. (2025) ‘Estimation of Food Intake Quantity Using Inertial Signals from Smartwatches’. arXiv. Available at: https://doi.org/10.48550/arXiv.2502.06649.  
+
+Lundberg, S. (2021) Beeswarm plot, SHAP. Available at: https://shap.readthedocs.io/en/latest/example_notebooks/api_examples/plots/beeswarm.html (Accessed: 29 April 2025).  
+ 
+Mahmood, Md Sohel (2021) Factor Analysis of Mixed Data, Towrds Data Science. Available at: https://towardsdatascience.com/factor-analysis-of-mixed-data-5ad5ce98663c/ (Accessed: 25 April 2025).  
+ 
+Mahmoud, R., Kimonis, V. and Butler, M.G. (2022) ‘Genetics of Obesity in Humans: A Clinical Review’, International Journal of Molecular Sciences, 23(19), p. 11005. Available at: https://doi.org/10.3390/ijms231911005.  
+ 
+Montañez, C.A.C. et al. (2017) ‘Machine learning approaches for the prediction of obesity using publicly available genetic profiles’, in 2017 International Joint Conference on Neural Networks (IJCNN). 2017 International Joint Conference on Neural Networks (IJCNN), pp. 2743–2750. Available at: https://doi.org/10.1109/IJCNN.2017.7966194.  
+ 
+Muñoz, J.-M. et al. (2025) ‘Estimation of total body fat using symbolic regression and evolutionary algorithms’. arXiv. Available at: https://doi.org/10.48550/arXiv.2503.00594.  
+ 
+Palechor, F.M. and Manotas, A.D.L.H. (2019) ‘Dataset for estimation of obesity levels based on eating habits and physical condition in individuals from Colombia, Peru and Mexico’, Data in Brief, 25, p. 104344. Available at: https://doi.org/10.1016/j.dib.2019.104344.  
+ 
+Papapanagiotou, V. et al. (2025) ‘A system for objectively measuring behavior and the environment to support large-scale studies on childhood obesity’, IEEE Journal of Biomedical and Health Informatics, 29(4), pp. 2969–2980. Available at: https://doi.org/10.1109/JBHI.2025.3526794.  
+ 
+Potdar, K., Pardawala, Taher, and Pai, Chimney (2017) ‘A Comparative Study of Categorical Variable Encoding Techniques for Neural Network Classifiers’, International Journal of Computer Applications, 175(4), pp. 7–9. Available at: https://doi.org/10.5120/ijca2017915495.  
+ 
+Ruberts, A. (2020) K-Prototypes - Customer Clustering with Mixed Data Types, Well Enough. Available at: https://antonsruberts.github.io/kproto-audience/ (Accessed: 25 April 2025).  
+ 
+Tanaka, K. and Nakanishi, T. (1996) ‘Obesity as a Risk Factor for Various Diseases: Necessity of Lifestyle Changes for Healthy Aging’, Applied Human Science, 15(4), pp. 139–148. Available at: https://doi.org/10.2114/jpa.15.139.  
+ 
+Tiwari, A. and Balasundaram, P. (2023) ‘Public Health Considerations Regarding Obesity’, in StatPearls. Treasure Island (FL): StatPearls Publishing. Available at: http://www.ncbi.nlm.nih.gov/books/NBK572122/ (Accessed: 6 March 2025).  
+ 
+Tuychiev, B. (2023) Learn XGBoost in Python: A Step-by-Step Tutorial, DataCamp. Available at: https://www.datacamp.com/tutorial/xgboost-in-python (Accessed: 27 April 2025).  
+ 
+Tzenios, N. (2023) ‘Obesity as a risk factor for different types of cancer’, EPRA International Journal of Research & Development (IJRD)PRA International Journal of Research and Development, 8(2), pp. 97–100. Available at: https://doi.org/10.36713/epra12421.  
+ 
+World Health Organisation (2022) A healthy lifestyle - WHO recommendations. Available at: https://www.who.int/europe/news-room/fact-sheets/item/a-healthy-lifestyle---who-recommendations (Accessed: 8 March 2025).  
+ 
 
 
