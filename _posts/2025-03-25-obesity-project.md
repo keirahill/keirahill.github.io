@@ -133,6 +133,7 @@ Figure 5 provides initial insights on numerical features, showing feature adjust
 |:-----:|
 | *Figure 5. Initial insights on numeric features* |
 
+  
 ## Continuous Data
 A pairplot (Figure 6) was conducted on the continuous data, to explore distributions and relationships. The distribution confirms a right-skew in age, which appears accurate, so all data was retained. There is a strong correlation between weight and BMI, confirmed by a correlation plot (Figure 7). For modelling purposes, weight will be dropped when BMI is used.
 
@@ -140,18 +141,19 @@ A pairplot (Figure 6) was conducted on the continuous data, to explore distribut
 | ![BMI](/assets/img/project_obesity/9.png) |
 |:-----:|
 | *Figure 6. Pairplot* |
-
   
+  
+
 ```javascript
 sns.heatmap(obesity_data_numeric.corr(), annot = True, cmap='Blues').set_title('Correlation of Variables')
 ```
-
+  
 {:.image-caption}
 | ![BMI](/assets/img/project_obesity/10.png) |
 |:-----:|
 | *Figure 7. Correlation matrix* |
-
-
+  
+  
 ## BMI vs Weight Class
 
 A boxplot (Figure 8) was created to evaluate the BMI and weight class relationship, confirming BMI was used to determine weight class, although bandings are not exact, due to synthetic data. BMI will be used going forwards.
@@ -161,6 +163,7 @@ A boxplot (Figure 8) was created to evaluate the BMI and weight class relationsh
 |:-----:|
 | *Figure 8. Boxplot of BMI vs Weight Class* |
 
+    
 ## Categorical Features
 Distributions of categorical features were explored (Figure 9), revealing some for consideration.
 
