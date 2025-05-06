@@ -18,6 +18,7 @@ Family history of overweight was the most significant predictor, including genet
 An expanded source of data collection method could provide a more diverse, less biased dataset.  
 
 
+<br />      
 
 # Project Background
 This project examines obesity levels and the impact of lifestyle factors such as eating habits, physical activity, age, and family history.   
@@ -33,6 +34,8 @@ Understanding lifestyle factors most significantly impacting obesity, can inform
 | *Figure 1. (TIWARI AND BALASUNDARAM, 2023)* |
 
 
+<br />      
+
 # Data Engineering
 ## Dataset
 The dataset for this project, [Estimation of Obesity Levels Based on Eating Habits and Physical Condition](https://archive.ics.uci.edu/dataset/544/estimation+of+obesity+levels+based+on+eating+habits+and+physical+condition) was sourced from The UCI Machine Learning Repository. 
@@ -47,6 +50,8 @@ It contains 17 attributes and 2,111 observations, collected via an anonymous sur
 | *Figure 2. (WORLD HEALTH ORGANISATION, 2022)* |
 
 Due to an imbalance towards ‘normal’ weight from the respondents, additional data was synthetically generated using SMOTE, balancing the dataset and increasing the observations to 2,111 (Palechor and Manotas, 2019).
+
+<br />      
 
 
 ## ETL
@@ -67,6 +72,8 @@ Initial exploration examined data types and checked for missing values (Figure 3
 | ![BMI](/assets/img/project_obesity/4.png) |
 |:-----:|
 | *Figure 3. Initial Exploration of dataset* |
+
+<br />      
 
 No missing data was identified; however, some features are numeric when categorical data was expected. This discrepancy will be explored. Columns were renamed for clarity and consistency (Appendix One).  
 
@@ -102,6 +109,8 @@ Some categorical fields have been encoded as numbers, also, several columns are 
 |:-----:|
 | *Figure 4. Histograms to show distributions on columns that should be categorical* |
 
+<br />      
+
 The histograms display three or four main responses, suggesting float generation through SMOTE. These features were rounded to the correct number of responses, allowing for interpretation of the original answer. Text responses were added to the dataset for use in the methodology stage.   
 
 Many machine learning models require categorical data to be encoded as numerical values. Remaining ordinal features were encoded using Scikit-learn’s OrdinalEncoder and Panda’s get_dummies  was used for one-hot encoding of nominal features (Potdar, Pardawala, Taher, and Pai, Chimney, 2017).  
@@ -136,6 +145,8 @@ Two additional attributes were added to support the exploratory data analysis (E
 - BMI, using weight / height²
 - Combined weight class with four categories (underweight, healthy, overweight and obese)
 
+<br />      
+
 # Data Analysis
 ## Hypotheses
 **Hypothesis 1: Higher water intake associated with lower BMI, as water acts as an appetite suppressant.**  
@@ -154,9 +165,8 @@ Figure 5 provides initial insights on numerical features, showing feature adjust
 |:-----:|
 | *Figure 5. Initial insights on numeric features* |  
 
-  
+<br />      
     
-      
 ## Continuous Data
 A pairplot (Figure 6) was conducted on the continuous data, to explore distributions and relationships. The distribution confirms a right-skew in age, which appears accurate, so all data was retained. There is a strong correlation between weight and BMI, confirmed by a correlation plot (Figure 7). For modelling purposes, weight will be dropped when BMI is used.
   
@@ -165,10 +175,14 @@ A pairplot (Figure 6) was conducted on the continuous data, to explore distribut
 |:-----:|
 | *Figure 6. Pairplot* |  
 
+<br />      
+
   
 ```javascript
 sns.heatmap(obesity_data_numeric.corr(), annot = True, cmap='Blues').set_title('Correlation of Variables')
 ```
+
+<br />      
 
     
 {:.image-caption}
@@ -176,6 +190,8 @@ sns.heatmap(obesity_data_numeric.corr(), annot = True, cmap='Blues').set_title('
 |:-----:|
 | *Figure 7. Correlation matrix* |  
 
+
+<br />      
 
     
 ## BMI vs Weight Class
@@ -186,6 +202,8 @@ A boxplot (Figure 8) was created to evaluate the BMI and weight class relationsh
 | ![BMI](/assets/img/project_obesity/11.png) |
 |:-----:|
 | *Figure 8. Boxplot of BMI vs Weight Class* |
+
+<br />      
   
       
 ## Categorical Features
@@ -196,18 +214,26 @@ Distributions of categorical features were explored (Figure 9), revealing some f
 |:-----:|
 | *Figure 9. Distributions* |
 
+<br />      
+
 Box plots were used to visualise BMI distributions across each category (Figure 10). Many align with expectations, i.e. physical activity supporting Hypothesis 2. However, some results were unexpected, with water consumption contradicting Hypothesis 1.
 
 {:.image-caption}
 | ![BMI](/assets/img/project_obesity/13.png) |
 |:-----:|
 | *Figure 10. Boxplots of BMI distributions* |
+
+<br />      
   
   
 ## Clustering
 ### K-Protoypes
-The dataset was clustered using K-Prototypes, a method that handles mixed datatypes, applying k-means for numeric data and matching categories for nominal data (Ruberts, 2020). Ordinal features were treated as numeric. All numeric features were normalised using Scikit-learn’s MinMax scaler, ensuring equal contribution.
-BMI and weight class were excluded from the modelling to identify patterns within the other features.
+The dataset was clustered using K-Prototypes, a method that handles mixed datatypes, applying k-means for numeric data and matching categories for nominal data (Ruberts, 2020). Ordinal features were treated as numeric. 
+ 
+All numeric features were normalised using Scikit-learn’s MinMax scaler, ensuring equal contribution.  
+
+BMI and weight class were excluded from the modelling to identify patterns within the other features.  
+
 
 ```javascript
 // list categorical and numeric features to be used in clustering, ordinal catergorical features have been set as numeric
@@ -261,12 +287,16 @@ An elbow plot (Figure 11) suggests the optimal number of clusters is 4, with obs
 |:-----:|
 | *Figure 11. Elbow plot* |
 
+<br />      
+
     
 {:.image-caption}
 | ![BMI](/assets/img/project_obesity/15.png) |
 |:-----:|
 | *Figure 12. Distrbutions of clusters* |
-  
+ 
+<br />      
+ 
   
 ### Factor Analysis
 Visualising clusters with 16 features is challenging, requiring a feature reduction. As it is a mixed dataset, FAMD from the Prince package was chosen (Mahmood, Md Sohel, 2021). Although only 33% of the variance is explained by the first three features (Figure 13), plotting these clusters against these three reveals distinct patterns, indicating the data can be grouped (Figure 14).
@@ -276,6 +306,8 @@ Visualising clusters with 16 features is challenging, requiring a feature reduct
 |:-----:|
 | *Figure 13. Explained varaince by features* |
 
+
+<br />      
   
 {:.image-caption}
 | ![BMI](/assets/img/project_obesity/17.png) |
@@ -289,12 +321,16 @@ Visualising clusters with 16 features is challenging, requiring a feature reduct
 | ![BMI](/assets/img/project_obesity/18.png) |
 |:-----:|
 | *Figure 15. BMI and Weight Class by cluster* |
+
+<br />      
   
   
 {:.image-caption}
 | ![BMI](/assets/img/project_obesity/19.png) |
 |:-----:|
 | *Figure 16. Distubutions of each cluster by all features* |
+
+<br />      
 
 To explore using SHAP, the data was split into training and testing datasets to evaluate model performance. Studies suggest that allocating 20-30% of the data for testing yields optimal results (Gholamy, Kreinovich and Kosheleva, 2018). 
 
@@ -314,6 +350,8 @@ An XGBoost classifier was applied to the training dataset to predict clusters in
 |:-----:|
 | *Figure 17. Accuracy stats of XGBoost classifier model* |
 
+<br />      
+
 SHAP beeswarm plots (Figure 18) display the importance of each feature for predicting clusters, with density and colour providing additional insights (Lundberg, 2021). Figure 19 provides a summary of the clusters.
 
 {:.image-caption}
@@ -321,11 +359,15 @@ SHAP beeswarm plots (Figure 18) display the importance of each feature for predi
 |:-----:|
 | *Figure 18. SHAP Beeswarm for each cluster* |
 
+<br />      
+
     
 {:.image-caption}
 | ![BMI](/assets/img/project_obesity/23.png) |
 |:-----:|
 | *Figure 19. Summary of most important features in predicting each cluster* |
+
+<br />      
 
 Analysis identified four clusters: two male, two female. The most influential metrics are similar for each gender, though often with opposing values. Therefore, a regression model will be used to predict BMI, with separate gender models to evaluate any improvement. 
 
@@ -353,12 +395,18 @@ acc_df.T
 |:-----:|
 | *Figure 20. Accuracy stats for each model* |
 
+<br />      
+
 {:.image-caption}
 | ![BMI](/assets/img/project_obesity/25.png) |
 |:-----:|
 | *Figure 21. Actual vs Predicted BMI* |
 
+<br />      
+
 The combined model outperformed the male model with a R-squared of 80% vs. 62%. The female model performed the best, achieving an R-squared of 91% and a MAPE of 6.4%
+
+<br />      
 
 # Results
 ## SHAP
@@ -369,6 +417,8 @@ Figure 22 compares the SHAP beeswarm plots for the combined, male, and female mo
 |:-----:|
 | *Figure 22. SHAP beeswarm for each model and feature importance summary* |
 
+<br />      
+
   
 ## Power BI
 Due to its ease in filtering data and creating interactive visuals, a power BI report was created.
@@ -378,11 +428,15 @@ Due to its ease in filtering data and creating interactive visuals, a power BI r
 |:-----:|
 | *Figure 23. Sankey visual of feature importance on predicting BMI* |
 
+<br />      
+
   
 {:.image-caption}
 | ![BMI](/assets/img/project_obesity/28.png) |
 |:-----:|
 | *Figure 24. BMI Analysis Dashboard - Combined * |
+
+<br />      
 
   
 {:.image-caption}
@@ -390,11 +444,14 @@ Due to its ease in filtering data and creating interactive visuals, a power BI r
 |:-----:|
 | *Figure 25. BMI Analysis Dashboard - Example hover to view distributions* |
 
+<br />      
   
 {:.image-caption}
 | ![BMI](/assets/img/project_obesity/30.png) |
 |:-----:|
 | *Figure 26. BMI Analysis Dashboard - Male and Female * |
+
+<br />      
 
   
 # Improvements
@@ -409,6 +466,8 @@ Survey data collection can lead to low or biased responses, and geography may in
 ## Non-Lifestyle Features
 Genetic factors contribute significantly to obesity (Herrera and Lindgren, 2010; Mahmoud, Kimonis and Butler, 2022). This project identified family history was the most important feature in predicting BMI. Machine learning models have been used with genetic profiles to predict obesity levels (Montañez et al., 2017).
 
+<br />      
+
 # Appendix
 
 {:.image-caption}
@@ -416,10 +475,15 @@ Genetic factors contribute significantly to obesity (Herrera and Lindgren, 2010;
 |:-----:|
 | *Appendix One. Survey Questions, Possible Answers and Variable Names * |
 
+<br />      
+
 {:.image-caption}
 | ![BMI](/assets/img/project_obesity/Picture2.png) |
 |:-----:|
 | *Appendix Two. Check of categorical responses within dataset * |
+
+<br />      
+<br />      
 
 # References
 
