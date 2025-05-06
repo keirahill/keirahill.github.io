@@ -4,7 +4,7 @@ title: Obesity Project
 subtitle: Which combinations of lifestyle habits have an impact on obesity, and can obesity levels be predicted using these features?
 cover-img: /assets/img/pexels-n-voitkevich-6942035.jpg
 thumbnail-img: /assets/img/obesitythumb.jpg
-tags: [clustering, classification]
+tags: [clustering, classification, regression]
 author: Keira Hill
 ---
 
@@ -118,4 +118,36 @@ obesity_data = applydummies(obesity_data, 'transport_type_c', False) // dont dro
 Two additional attributes were added to support the exploratory data analysis (EDA):  
 - BMI, using weight / height²
 - Combined weight class with four categories (underweight, healthy, overweight and obese)
+
+# Data Analysis
+## Hypotheses
+Hypothesis 1: Higher water intake associated with lower BMI, as water acts as an appetite suppressant.
+Hypothesis 2: Frequency of exercise directly affects BMI, with no exercise increasing the likelihood of being overweight.
+
+## EDA
+Clustering will be part of the EDA to identify data patterns. EDA will be performed on the full dataset, with train and test splits used to evaluate clusters. Python packages, including Plotly for its interactivity, will be used. 
+Figure 5 provides initial insights on numerical features, showing feature adjustments made.
+
+{:.image-caption}
+| ![BMI](/assets/img/project_obesity/8.png) |
+|:-----:|
+| *Figure 5. Initial insights on numeric features* |
+
+## Continuous Data
+A pairplot (Figure 6) was conducted on the continuous data, to explore distributions and relationships. The distribution confirms a right-skew in age, which appears accurate, so all data was retained. There is a strong correlation between weight and BMI, confirmed by a correlation plot (Figure 7). For modelling purposes, weight will be dropped when BMI is used.
+
+{:.image-caption}
+| ![BMI](/assets/img/project_obesity/9.png) |
+|:-----:|
+| *Figure 6. Pairplot* |
+
+```javascript
+sns.heatmap(obesity_data_numeric.corr(), annot = True, cmap='Blues').set_title('Correlation of Variables')
+```
+
+{:.image-caption}
+| ![BMI](/assets/img/project_obesity/10.png) |
+|:-----:|
+| *Figure 7. Correlation matrix* |
+
 
