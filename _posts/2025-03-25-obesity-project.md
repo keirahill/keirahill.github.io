@@ -165,8 +165,7 @@ A pairplot (Figure 6) was conducted on the continuous data, to explore distribut
 |:-----:|
 | *Figure 6. Pairplot* |  
 
-
-    
+  
 ```javascript
 sns.heatmap(obesity_data_numeric.corr(), annot = True, cmap='Blues').set_title('Correlation of Variables')
 ```
@@ -176,9 +175,6 @@ sns.heatmap(obesity_data_numeric.corr(), annot = True, cmap='Blues').set_title('
 | ![BMI](/assets/img/project_obesity/10.png) |
 |:-----:|
 | *Figure 7. Correlation matrix* |  
-
-
-    
 
 
     
