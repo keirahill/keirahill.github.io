@@ -9,16 +9,23 @@ author: Keira Hill
 ---
 
 # Executive Summary
-This project aims to determine if BMI can be predicted using lifestyle factors, based on survey data from Latin America. Obesity is a global concern and risk factor for many chronic diseases. Understanding how lifestyle impacts BMI can help management of health.
-Data clustering revealed lifestyle differences between genders, leading to separate prediction models. The XGBoost regressor model performed well on the combined dataset (R-squared: 80%, MAPE: 8.6%). The female model outperformed this (R-squared: 91%, MAPE: 6.4%), whilst the male model was less accurate (R-squared: 62%), indicating lifestyle factors are more predictive for females.
-Family history of overweight was the most significant predictor, including genetic data could improve accuracy. 
-An expanded source of data collection method could provide a more diverse, less biased dataset.
+This project aims to determine if BMI can be predicted using lifestyle factors, based on survey data from Latin America. Obesity is a global concern and risk factor for many chronic diseases. Understanding how lifestyle impacts BMI can help management of health.  
+
+Data clustering revealed lifestyle differences between genders, leading to separate prediction models. The XGBoost regressor model performed well on the combined dataset (R-squared: 80%, MAPE: 8.6%). The female model outperformed this (R-squared: 91%, MAPE: 6.4%), whilst the male model was less accurate (R-squared: 62%), indicating lifestyle factors are more predictive for females.  
+
+Family history of overweight was the most significant predictor, including genetic data could improve accuracy.   
+
+An expanded source of data collection method could provide a more diverse, less biased dataset.  
+
 
 
 # Project Background
-This project examines obesity levels and the impact of lifestyle factors such as eating habits, physical activity, age, and family history. 
-Over recent decades, obesity has become a global concern (Figure 1) (Tiwari and Balasundaram, 2023; Tzenios, 2023). Obesity is a risk factor for chronic diseases like cancer, diabetes, and heart disease, leading to high mortality rates and healthcare costs (Abbott, Lemacks and Greer, 2022; Tiwari and Balasundaram, 2023). Lifestyle factors, including nutrition and physical activity, significantly influence the development and management of obesity (Tanaka and Nakanishi, 1996; Araromi et al., 2024; CDC, 2024). 
+This project examines obesity levels and the impact of lifestyle factors such as eating habits, physical activity, age, and family history.   
+
+Over recent decades, obesity has become a global concern (Figure 1) (Tiwari and Balasundaram, 2023; Tzenios, 2023). Obesity is a risk factor for chronic diseases like cancer, diabetes, and heart disease, leading to high mortality rates and healthcare costs (Abbott, Lemacks and Greer, 2022; Tiwari and Balasundaram, 2023). Lifestyle factors, including nutrition and physical activity, significantly influence the development and management of obesity (Tanaka and Nakanishi, 1996; Araromi et al., 2024; CDC, 2024).   
+
 Understanding lifestyle factors most significantly impacting obesity, can inform personal health improvements via aspects such as diet, exercise and alcohol consumption (Tanaka and Nakanishi, 1996). 
+
 
 {:.image-caption}
 | ![BMI](/assets/img/project_obesity/1.png) |
@@ -29,7 +36,9 @@ Understanding lifestyle factors most significantly impacting obesity, can inform
 # Data Engineering
 ## Dataset
 The dataset for this project, [Estimation of Obesity Levels Based on Eating Habits and Physical Condition](https://archive.ics.uci.edu/dataset/544/estimation+of+obesity+levels+based+on+eating+habits+and+physical+condition) was sourced from The UCI Machine Learning Repository. 
+
 It contains 17 attributes and 2,111 observations, collected via an anonymous survey from individuals in Peru, Mexico and Columbia. 485 respondents answered questions on nutritional and physical behaviours (Appendix One). Nutritional status classifications (Figure 2) were applied based on BMI calculated from weight and height, with additional categories for 'Pre-obesity.' 
+
 
 
 {:.image-caption}
@@ -39,9 +48,11 @@ It contains 17 attributes and 2,111 observations, collected via an anonymous sur
 
 Due to an imbalance towards ‘normal’ weight from the respondents, additional data was synthetically generated using SMOTE, balancing the dataset and increasing the observations to 2,111 (Palechor and Manotas, 2019).
 
+
 ## ETL
 
-Tools used for processing and analytics in this project include Python, accessed through Azure Databricks, offering a user-friendly interface. Downloaded source data was uploaded to GitHub as a Panda’s DataFrame.
+Tools used for processing and analytics in this project include Python, accessed through Azure Databricks, offering a user-friendly interface. Downloaded source data was uploaded to GitHub as a Panda’s DataFrame.  
+
 
 ```javascript
 obesity_data= pd.read_csv(
@@ -57,9 +68,12 @@ Initial exploration examined data types and checked for missing values (Figure 3
 |:-----:|
 | *Figure 3. Initial Exploration of dataset* |
 
-No missing data was identified; however, some features are numeric when categorical data was expected. This discrepancy will be explored. Columns were renamed for clarity and consistency (Appendix One).
-24 duplicate rows were identified. Due to limited data, it was unclear whether these are true duplicates, therefore, the records were retained.
-Object features of the dataset were examined (Appendix Two), revealing some ordinal features. These columns were set to ordered categorical data types.
+No missing data was identified; however, some features are numeric when categorical data was expected. This discrepancy will be explored. Columns were renamed for clarity and consistency (Appendix One).  
+
+24 duplicate rows were identified. Due to limited data, it was unclear whether these are true duplicates, therefore, the records were retained.  
+
+Object features of the dataset were examined (Appendix Two), revealing some ordinal features. These columns were set to ordered categorical data types.  
+
  
 ```javascript
 // reference: (The Py4DS Community, 2023)
@@ -82,13 +96,16 @@ obesity_data["weight_class_c"] = obesity_data["weight_class_c"].astype(
 ```
 Some categorical fields have been encoded as numbers, also, several columns are floats rather than integers, as expected. Distributions of these features was explored through histograms (Figure 4). 
 
+
 {:.image-caption}
 | ![BMI](/assets/img/project_obesity/6.png) |
 |:-----:|
 | *Figure 4. Histograms to show distributions on columns that should be categorical* |
 
-The histograms display three or four main responses, suggesting float generation through SMOTE. These features were rounded to the correct number of responses, allowing for interpretation of the original answer. Text responses were added to the dataset for use in the methodology stage. 
-Many machine learning models require categorical data to be encoded as numerical values. Remaining ordinal features were encoded using Scikit-learn’s OrdinalEncoder and Panda’s get_dummies  was used for one-hot encoding of nominal features (Potdar, Pardawala, Taher, and Pai, Chimney, 2017).
+The histograms display three or four main responses, suggesting float generation through SMOTE. These features were rounded to the correct number of responses, allowing for interpretation of the original answer. Text responses were added to the dataset for use in the methodology stage.   
+
+Many machine learning models require categorical data to be encoded as numerical values. Remaining ordinal features were encoded using Scikit-learn’s OrdinalEncoder and Panda’s get_dummies  was used for one-hot encoding of nominal features (Potdar, Pardawala, Taher, and Pai, Chimney, 2017).  
+
 
 ```javascript
 // reference: (Stack Overflow, 2022)
@@ -121,12 +138,16 @@ Two additional attributes were added to support the exploratory data analysis (E
 
 # Data Analysis
 ## Hypotheses
-Hypothesis 1: Higher water intake associated with lower BMI, as water acts as an appetite suppressant.
-Hypothesis 2: Frequency of exercise directly affects BMI, with no exercise increasing the likelihood of being overweight.
+**Hypothesis 1: Higher water intake associated with lower BMI, as water acts as an appetite suppressant.**  
+
+**Hypothesis 2: Frequency of exercise directly affects BMI, with no exercise increasing the likelihood of being overweight.**
+
 
 ## EDA
-Clustering will be part of the EDA to identify data patterns. EDA will be performed on the full dataset, with train and test splits used to evaluate clusters. Python packages, including Plotly for its interactivity, will be used. 
-Figure 5 provides initial insights on numerical features, showing feature adjustments made.
+Clustering will be part of the EDA to identify data patterns. EDA will be performed on the full dataset, with train and test splits used to evaluate clusters. Python packages, including Plotly for its interactivity, will be used.  
+
+Figure 5 provides initial insights on numerical features, showing feature adjustments made.  
+
 
 {:.image-caption}
 | ![BMI](/assets/img/project_obesity/8.png) |
