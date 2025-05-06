@@ -152,7 +152,9 @@ Figure 5 provides initial insights on numerical features, showing feature adjust
 {:.image-caption}
 | ![BMI](/assets/img/project_obesity/8.png) |
 |:-----:|
-| *Figure 5. Initial insights on numeric features* |
+| *Figure 5. Initial insights on numeric features* |  
+
+  
     
       
 ## Continuous Data
@@ -161,10 +163,10 @@ A pairplot (Figure 6) was conducted on the continuous data, to explore distribut
 {:.image-caption}
 | ![BMI](/assets/img/project_obesity/9.png) |
 |:-----:|
-| *Figure 6. Pairplot* |
-     
-     
-   
+| *Figure 6. Pairplot* |  
+
+
+    
 ```javascript
 sns.heatmap(obesity_data_numeric.corr(), annot = True, cmap='Blues').set_title('Correlation of Variables')
 ```
@@ -173,7 +175,10 @@ sns.heatmap(obesity_data_numeric.corr(), annot = True, cmap='Blues').set_title('
 {:.image-caption}
 | ![BMI](/assets/img/project_obesity/10.png) |
 |:-----:|
-| *Figure 7. Correlation matrix* |
+| *Figure 7. Correlation matrix* |  
+
+
+    
 
 
     
